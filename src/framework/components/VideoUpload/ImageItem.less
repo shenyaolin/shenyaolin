@@ -1,0 +1,36 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  .cjm-mobile-up-image-item {
+    position: relative;
+    width: 143rem / @font-size-base;
+    height: 143rem / @font-size-base;
+    border: 1px solid @modal-border-color;
+    margin: 0 20rem / @font-size-base 20rem / @font-size-base 0;
+    border-radius: 3rem / @font-size-base;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    text-align: center;
+    line-height: 143rem / @font-size-base;
+    video {
+      max-width: 140rem / @font-size-base;
+      max-height: 140rem / @font-size-base;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .remove-icon {
+      position: absolute;
+      right: 8rem / @font-size-base;
+      top: 8rem / @font-size-base;
+    }
+    .open-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}

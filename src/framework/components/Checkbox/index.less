@@ -1,0 +1,68 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  @height: 40rem/@font-size-base;
+
+  .cjm-mobile-checkbox {
+    display: inline-block;
+    vertical-align: top;
+    height: @height;
+  }
+
+  .cjm-mobile-checkbox-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: @height - 4rem/@font-size-base;
+    height: @height - 4rem/@font-size-base;
+    line-height: @height - 4rem/@font-size-base;
+    border: 2rem/@font-size-base solid #cccccc;
+    border-radius: 50%;
+    margin-right: 19rem/@font-size-base;
+    overflow: hidden;
+
+    .check-icon {
+      display: none;
+    }
+  }
+
+  .cjm-mobile-checkbox-text {
+    display: inline-block;
+    vertical-align: top;
+    color: @primary-text-color;
+    font-size: 28rem/@font-size-base;
+    line-height: @height;
+    height: @height;
+  }
+
+  .cjm-mobile-checked {
+    .cjm-mobile-checkbox-icon {
+      border: 2rem/@font-size-base solid @primary-color;
+      background-color: @primary-color;
+      text-align: center;
+
+      .check-icon {
+        display: inline-block;
+      }
+    }
+  }
+
+  .cjm-mobile-checkbox-group {
+    background-color: #ffffff;
+    margin-bottom: 150rem/@font-size-base;
+
+    .cjm-mobile-checkbox {
+      display: block;
+      padding: 24rem/@font-size-base 30rem/@font-size-base;
+      border-top: 1rem/@font-size-base solid @normal-border-color;
+    }
+  }
+
+  .theme-blue {
+    .cjm-mobile-checked {
+      .cjm-mobile-checkbox-icon {
+        border: 2rem/@font-size-base solid @theme-blue-primary-color;
+        background-color: @theme-blue-primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  @height: 88rem/@font-size-base;
+  @width: 6.9rem;
+  @text-font-size: 30rem/@font-size-base;
+
+  .cjm-mobile-button {
+    padding: 0;
+    margin: 0 auto;
+    height: @height;
+    width: @width!important;
+    border-radius: @height/2;
+    border: 1px solid @primary-color;
+    background-color: #ffffff;
+    outline: none;
+    color: @primary-color;
+    font-size: @text-font-size;
+    transition: background-color 200ms, color 200ms, border 200ms;
+    border-radius: 0.44rem!important;
+    margin-left: 0.3rem;
+  }
+
+  .cjm-mobile-button-theme-primary {
+    background-color: @primary-color;
+    color: #ffffff;
+
+    &:active {
+      background-color: @button-active-color;
+      color: @button-active-text-color;
+    }
+
+    &.cjm-mobile-button-disabled {
+      background-color: @button-disable-color;
+      border: 1px solid @button-disable-color;
+      color: #ffffff;
+    }
+
+
+  }
+
+  .cjm-mobile-button-block {
+    display: block;
+    width: 100%;
+  }
+
+  .cjm-mobile-button-type-bottom {
+    // position: fixed;
+    // left: 0.3rem;
+    // bottom: 0;
+    width: 100%;
+    height: 98rem/@font-size-base;
+    border-radius: 0;
+  }
+
+  .cjm-mobile-button-type-goast {
+    background: #ffffff;
+    border: 1px solid @button-active-color;
+    color: @button-active-text-color;
+  }
+}
+
+//
+:global {
+  .cjm-mobile-button-type-list-button {
+    width: auto;
+    padding-left: 30rem/@font-size-base;
+    padding-right: 30rem/@font-size-base;
+    height: 56rem/@font-size-base;
+    font-size: 26rem/@font-size-base;
+    color: @normal-text-color;
+    background-color: #ffffff;
+    border-color: @modal-border-color;
+    margin-left: 20rem/@font-size-base;
+
+    &:active {
+      background-color: #ffffff;
+      color: @normal-text-color;
+    }
+  }
+}
+
+//-----theme-blue
+:global {
+  .theme-blue {
+    .cjm-mobile-button {
+      border: 1px solid @theme-blue-primary-color;
+      color: @theme-blue-primary-color;
+      background-color: #ffffff;
+    }
+
+    .cjm-mobile-button-theme-primary {
+      background-color: @theme-blue-primary-color;
+      color: #ffffff;
+
+      &:active {
+        background-color: @theme-blue-button-active-color;
+        color: @theme-blue-button-active-text-color;
+      }
+
+      &.cjm-mobile-button-disabled {
+        background-color: @theme-blue-button-disable-color;
+        border: 1px solid @theme-blue-button-disable-color;
+        color: #ffffff;
+      }
+    }
+  }
+}

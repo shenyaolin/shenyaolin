@@ -1,0 +1,45 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  .cjm-mobile-form-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid @normal-border-color;
+    font-size: 0;
+    white-space: nowrap;
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .cjm-mobile-form-item-label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 196rem/@font-size-base;
+    font-size: 30rem/@font-size-base;
+    color: @normal-text-color;
+    padding: 30rem/@font-size-base;
+    padding-right: 30rem/@font-size-base;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  .cjm-mobile-form-item-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 490rem/@font-size-base;
+    font-size: 28rem/@font-size-base;
+    line-height: 90rem/@font-size-base;
+    color: @normal-text-color;
+    .cjm-mobile-form-input {
+      width: 450rem/@font-size-base;
+    }
+  }
+  .cjm-mobile-form-item-require-star {
+    position: absolute;
+    left: 12rem/@font-size-base;
+    top: 30rem/@font-size-base;
+    color: red;
+    font-style: normal;
+  }
+}

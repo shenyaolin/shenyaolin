@@ -1,0 +1,80 @@
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .calendarTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 0.24rem;
+      height: 0.24rem;
+    }
+    div {
+      font-size: 0.3rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+    }
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.26rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #999999;
+    .weekName {
+      padding: 0.36rem 0.2rem 0.16rem 0.2rem;
+    }
+    tr {
+      display: flex;
+      justify-content: space-between;
+    }
+    .dayItem {
+      margin-bottom: 0.32rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      & > div:first-child {
+        position: relative;
+        margin-bottom: 0.16rem;
+        width: 0.9rem;
+        height: 1.16rem;
+        background: #ebfcfc;
+        opacity: 0.96;
+        border-radius: 0.06rem;
+        .signStatusBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 0.52rem;
+          height: 0.52rem;
+          background: #cef2f5;
+          border: 0.02rem solid #c7f3f6;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 0.52rem;
+          font-size: 0.28rem;
+          font-family: Source Han Sans CN;
+          font-weight: 500;
+          color: #439cc4;
+          img {
+            position: absolute;
+            margin: 50% 0;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      & > div:last-child {
+        color: #333333;
+      }
+    }
+  }
+}

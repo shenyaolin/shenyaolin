@@ -1,0 +1,107 @@
+.villageLandscapeContainer {
+  height: 100%;
+  background: #f7f8fc;
+
+  :global {
+    .am-search {
+      background: #f7f8fc;
+
+      .am-search-input {
+        border: 0.02rem solid #e6e6ea;
+        border-radius: 0.28rem;
+      }
+    }
+
+    .cjm-mobile-card-list-wrap {
+      padding: 0 0.24rem;
+    }
+  }
+
+  .listItem {
+    padding: 0.38rem 0.32rem 0.42rem 0.32rem;
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    box-shadow: 0rem 0rem 0.2rem rgba(191, 191, 191, 0.1);
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+
+    img {
+      display: block;
+      width: 100%;
+      margin: 0.24rem 0;
+      border-radius: 5%;
+    }
+
+    .introduce {
+      .name {
+        font-size: 0.36rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: #333333;
+      }
+
+      .direction {
+        line-height: 0.56rem;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+      }
+    }
+  }
+}
+
+.villageLandscapeDetail {
+  box-sizing: border-box;
+  position: relative;
+  background-color: #ffffff;
+  padding: 0.42rem 0.3rem 0.5rem;
+  min-height: 100%;
+
+  .title {
+    color: #474747;
+    font-size: 0.32rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+
+  .secondTit {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .time {
+    color: #cccccc;
+    font-size: 0.22rem;
+  }
+
+  .content {
+    color: #333333;
+    font-size: 0.32rem;
+    margin-top: 0.55rem;
+
+    img {
+      max-width: 100%;
+    }
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    video {
+      margin-bottom: 0.32rem;
+      width: 6.86rem !important;
+      border-radius: 0.1rem;
+    }
+  }
+
+  .count {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0.24rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 0.26rem;
+    color: #bfbfbf;
+  }
+}

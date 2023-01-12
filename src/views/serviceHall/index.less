@@ -1,0 +1,40 @@
+.serviceHall {
+  padding-top: 0.24rem;
+}
+.navContainer {
+  border-radius: 0.2rem;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 0.24rem;
+  padding: 0.32rem 0.24rem 0.4rem;
+  width: 95%;
+  .navTitle {
+    padding: 0 0 0.42rem 0;
+    font-size: 0.32rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  .navContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.32rem 0.65rem;
+    .navItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon {
+        width: 0.56rem;
+        height: 0.56rem;
+        background: linear-gradient(180deg, #76b6fb 0%, #5c70fd 100%);
+        margin-bottom: 0.26rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &:nth-child(4n) {
+        margin: 0;
+      }
+    }
+  }
+}

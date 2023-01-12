@@ -1,0 +1,27 @@
+@import "../theme";
+
+:global {
+  .cjm-mobile-toast {
+    position: fixed;
+    padding: 23rem/@font-size-base 30rem/@font-size-base;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    color: #ffffff;
+    font-size: 28rem/@font-size-base;
+    border-radius: 13rem/@font-size-base;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 200ms;
+    width: fit-content;
+    max-width: 560rem/@font-size-base;
+    max-height: 50%;
+    word-break: break-word;
+    &.cjm-mobile-toast-hide-animate {
+      opacity: 0;
+    }
+    &.cjm-mobile-toast-hide {
+      display: none;
+    }
+  }
+}

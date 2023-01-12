@@ -1,0 +1,80 @@
+@import '~framework/assets/css/theme';
+
+:global {
+  .cjm-mobile-card-item {
+    background-color: #ffffff;
+    margin-bottom: 20rem/@font-size-base;
+    position: relative;
+    // padding: 30rem/@font-size-base 0;
+
+    .card-title {
+      height: 88rem/@font-size-base;
+      line-height: 88rem/@font-size-base;
+      border-bottom: 1px solid @normal-border-color;
+      font-size: 30rem/@font-size-base;
+      color: @primary-text-color;
+      font-weight: bolder;
+      padding: 0 30rem/@font-size-base;
+      div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .detail-list {
+      padding: 30rem/@font-size-base 30rem/@font-size-base 0;
+    }
+
+    .detail-item {
+      margin-bottom: 25rem/@font-size-base;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .column-label {
+      width: 170rem/@font-size-base;
+      word-break: break-all;
+      padding-right: 40rem/@font-size-base;
+      color: @normal-text-color;
+    }
+
+    .column-content {
+      box-sizing: border-box;
+      width: 490rem/@font-size-base;
+      word-break: break-all;
+      color: @primary-text-color;
+    }
+
+    .column-label, .column-content {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 28rem/@font-size-base;
+      white-space: normal;
+    }
+
+    .detail-footer {
+      margin-top: 30rem/@font-size-base;
+      text-align: right;
+      padding-right: 30rem/@font-size-base;
+      padding-bottom: 30rem/@font-size-base;
+
+      button {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
+    .cjm-card-img{
+      position: absolute;
+      top: 108rem/@font-size-base;
+      right: 18rem/@font-size-base;
+      img{
+        width: 129rem/@font-size-base;
+        height: 129rem/@font-size-base;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  .cjm-mobile-list-button-group {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 98rem/@font-size-base;
+    border-top: 1px solid @modal-border-color;
+  }
+  .buttonItem() {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    border-radius: 0;
+    border-bottom: 0;
+    border-top: none;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .cjm-mobile-list-checkall-wrap {
+    width: 251rem/@font-size-base;
+    background-color: #ffffff;
+    .buttonItem();
+    .cjm-mobile-list-checkall {
+      margin-top: 30rem/@font-size-base;
+      margin-left: 30rem/@font-size-base;
+    }
+  }
+  .cjm-mobile-list-cancel-button {
+    width: 248rem/@font-size-base;
+    border-left: 1px solid @modal-border-color;
+    color: @primary-text-color;
+    .buttonItem();
+  }
+  .cjm-mobile-list-ok-button {
+    width: 250rem/@font-size-base;
+    .buttonItem();
+  }
+}

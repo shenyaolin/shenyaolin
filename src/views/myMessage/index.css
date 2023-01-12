@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.messBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.messBox .messBtn {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.24rem;
+  padding-right: 0.3rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EBEBEB;
+}
+.messBox .messBtn .messCon {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.messBox .messBtn .messCon .messIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.messBox .messBtn .messCon .messText {
+  margin-left: 0.3rem;
+}
+.messBox .messBtn .messCon .messText .messName {
+  font-weight: 700;
+}
+.messBox .messBtn .messCon .messText .messTit {
+  margin-top: 0.1rem;
+  color: #999999;
+}
+.messBox .messBtn .num {
+  height: 0.32rem;
+  background-color: #fb1024;
+  padding: 0.08rem 0.12rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 0.18rem;
+  border-radius: 0.2rem;
+}

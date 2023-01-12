@@ -1,0 +1,77 @@
+.regionBox{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right: 0;
+  top: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 100;
+}
+.regionContent{
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background: #fff;
+  .regionHeader{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    height: 44px;
+    line-height: 44px;
+    color: #26A2FF;
+  }
+  .selectVal{
+    .selectTit{
+      height: 60px;
+      line-height: 60px;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding: 0 30px;
+      box-sizing: border-box;
+      overflow: auto;
+      border-bottom: 1px solid #eee;
+      li{
+        min-width: 33%;
+        flex-shrink: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      .active{
+        font-weight: bold;
+        color: #333;
+        font-size: 16px;
+        padding-bottom: 4px;
+        box-sizing: border-box;
+        border-bottom: 2px solid #26A2FF;
+      }
+    }
+    .regionList{
+      overflow-y: auto;
+      height: 350px;
+      padding: 0 0 0 30px;
+      box-sizing: border-box;
+      .regionItem{
+        height: 44px;
+        line-height: 44px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.regionText{
+  :global{
+    .cjm-mobile-form-input{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.messBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .messBtn {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .24rem;
+    padding-right: .3rem;
+    box-sizing: border-box;
+    // margin: 0 .2rem;
+    border-bottom: 1px solid #EBEBEB;
+
+    .messCon {
+      display: flex;
+      align-items: center;
+      text-align: left;
+
+      .messIcon {
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .messText {
+        margin-left: .3rem;
+
+        .messName {
+          font-weight: 700;
+        }
+
+        .messTit {
+          margin-top: .1rem;
+          color: #999999;
+        }
+      }
+    }
+
+    .num {
+      height: .32rem;
+      background-color: #fb1024;
+      padding: .08rem .12rem;
+      color: #fff;
+      font-weight: 700;
+      line-height: .18rem;
+      border-radius: .2rem;
+    }
+  }
+}

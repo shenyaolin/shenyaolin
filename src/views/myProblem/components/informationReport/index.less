@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+}
+
+.enterpreneurial {
+  position: relative;
+  height: 90%;
+  :global {
+    .am-tab-bar-tab {
+      height: 0.98rem;
+
+      &:nth-of-type(1) {
+        .am-tab-bar-tab-image {
+          width: 0.4rem;
+          height: 0.43rem;
+        }
+      }
+
+      &:nth-of-type(2) {
+        .am-tab-bar-tab-image {
+          width: 0.41rem;
+          height: 0.44rem;
+        }
+      }
+
+      &:nth-of-type(3) {
+        .am-tab-bar-tab-image {
+          width: 0.37rem;
+          height: 0.45rem;
+        }
+      }
+    }
+  }
+}
+
+.informationReportContainer {
+  background: #f7f8fc;
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 3rem;
+    background: url('/assets/images/newImg/Information-background.png');
+    background-size: 100% 100%;
+    div {
+      font-size: 0.26rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #a6ddfc;
+    }
+    & > div:first-child {
+      margin-bottom: 0.32rem;
+      font-size: 0.32rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+  .navBox {
+    padding: 0 0.32rem;
+    height: 1.96rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.36rem;
+      width: 100%;
+      height: 50%;
+      background-color: #fff;
+      .leftBox {
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        font-family: Source Han Sans CN;
+        font-weight: 500;
+        color: #333333;
+        img {
+          margin-right: 0.1rem;
+          width: 0.3rem;
+          height: 0.3rem;
+        }
+      }
+      .rightBox {
+        width: 0.28rem;
+        height: 0.28rem;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &:first-child {
+        border-top-right-radius: 0.2rem;
+        border-top-left-radius: 0.2rem;
+      }
+      &:last-child {
+        border-bottom-right-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+      }
+    }
+  }
+}
+
+//留言上报
+.MessageReportingContainer {
+  .formItem {
+    display: flex;
+    flex-direction: column;
+    :global {
+      .cjm-mobile-form-item-label {
+        padding: 0.3rem 0.3rem 0.18rem;
+      }
+      .cjm-mobile-form-item-content {
+        width: 100%;
+      }
+      .cjm-mobile-form-textarea {
+        padding: 0 0.3rem 0.35rem;
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      .textNum {
+        margin: 0 0 0.32rem 6rem;
+        width: 0.74rem;
+        height: 0.3rem;
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        line-height: 0.32rem;
+        color: #bfbfbf;
+      }
+    }
+  }
+  :global {
+    .cjm-mobile-button {
+      margin-top: 0.58rem;
+      display: block;
+    }
+  }
+}
+
+//意见箱
+.opinionBoxContainer {
+  .cwHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.32rem;
+    height: 1.2rem;
+    div {
+      position: relative;
+      width: 3.3rem;
+      height: 0.56rem;
+      & > ::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0.24rem;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background: url("/assets/images/newImg/block-arrow.png");
+        background-size: 100% 100%;
+      }
+    }
+    :global {
+      .cjm-mobile-form-input {
+        padding: 0.14rem 0.26rem;
+        width: 3.3rem;
+        height: 0.56rem;
+        background: #ffffff;
+        border-radius: 0.28rem;
+        font-size: 0.26rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #666666;
+      }
+    }
+  }
+  .renderItem {
+    margin-bottom: 0.16rem;
+    padding: 0.32rem 0.52rem 0.32rem 0.4rem;
+    background: #ffffff;
+    border-radius: 0.2rem;
+    .problemType {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      color: #333333;
+      .adoptType {
+        width: 1.08rem;
+        line-height: 0.42rem;
+        background: #ffe3d4;
+        border-radius: 0.06rem;
+        font-size: 0.26rem;
+        font-weight: 400;
+        font-family: Source Han Sans CN;
+        color: #ff5c00;
+        text-align: center;
+      }
+      .adoptedType {
+        background: #c9f3e3;
+        color: #00b772;
+      }
+    }
+    .userMsg {
+      margin: 0.24rem 0;
+      font-size: 0.26rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #bfbfbf;
+      span {
+        margin-right: 0.24rem;
+      }
+    }
+    .imgs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-radius: 0.2rem;
+      font-size: 0.28rem;
+      line-height: 0.44rem;
+      font-family: Source Han Sans CN;
+      color: #666666;
+      .imgs1 {
+        width: 4.3rem;
+        height: 4.3rem;
+      }
+      .imgs2 {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+      .imgs3 {
+        width: 2.1rem;
+        height: 2.1rem;
+      }
+      img {
+        margin-top: 0.2rem;
+        &:nth-child(-n + 3) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+//意见箱详情
+.detailContainer {
+  padding: 0.32rem 0.54rem 0.32rem 0.32rem;
+  height: 100%;
+  background-color: #fff;
+  .problemType {
+    font-size: 0.32rem;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #333333;
+  }
+  .userMsg {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.24rem 0;
+    font-size: 0.26rem;
+    font-family: SourceHanSansCN-Regular;
+    color: #bfbfbf;
+  }
+  .detailDescription {
+    font-size: 0.28rem;
+    font-family: Source Han Sans CN;
+    line-height: 0.44rem;
+    color: #333333;
+  }
+  .imgs {
+    margin-bottom: 0.32rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 0.2rem;
+    font-size: 0.28rem;
+    line-height: 0.44rem;
+    font-family: Source Han Sans CN;
+    color: #666666;
+    .imgs1 {
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+    .imgs2 {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    .imgs3 {
+      width: 2.1rem;
+      height: 2.1rem;
+    }
+    img {
+      margin-top: 0.2rem;
+      &:nth-child(-n + 3) {
+        margin-top: 0.24rem;
+      }
+    }
+  }
+  .reply {
+    margin-bottom: 0.32rem;
+    padding-top: 0.4rem;
+    border-top: 0.02rem solid #e6e6e6;
+    .replyTitle {
+      font-size: 0.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+    }
+    .replyContent {
+      padding-top: 0.24rem;
+      font-size: 0.28rem;
+      font-family: Source Han Sans CN;
+      color: #a6a6a6;
+      & > div {
+        .replyContentHeader {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.24rem;
+          font-size: 0.28rem;
+          font-family: Source Han Sans CN;
+          color: #a6a6a6;
+          & > div:first-child {
+            font-size: 0.3rem;
+            font-weight: 500;
+            color: #26a2ff;
+            span {
+              margin-left: 0.12rem;
+              font-size: 0.26rem;
+              font-weight: 400;
+            }
+          }
+        }
+        .replyContentCenter {
+          padding: 0.32rem 0.38rem 0.44rem 0.32rem;
+          background: #fafafa;
+          border-radius: 0.2rem;
+          color: #333333;
+          & > div:first-child {
+            font-size: 0.3rem;
+          }
+          .adoptState {
+            margin: 0.24rem 0;
+            font-size: 0.28rem;
+          }
+          .adviceReply {
+            font-size: 0.28rem;
+            line-height: 0.44rem;
+            color: #666666;
+          }
+        }
+      }
+    }
+  }
+  .acceptanceBtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.08rem;
+    background: #ffffff;
+    border-top: 0.02rem solid #ededed;
+    :global {
+      .cjm-mobile-button {
+        margin-top: 0.1rem;
+        vertical-align: top;
+      }
+    }
+  }
+  .evaluate {
+    padding-top: 0.4rem;
+    border-top: 0.02rem solid #e6e6e6;
+    .evaluateTitle {
+      margin-bottom: 0.32rem;
+      font-size: 0.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+    }
+    .evaluateContent {
+      font-size: 0.3rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #26a2ff;
+    }
+  }
+}
+
+//评价
+.evaluateContainer {
+  height: 100%;
+  .promptLanguage {
+    padding: 0.34rem 0 0.34rem 0.26rem;
+    font-size: 0.32rem;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #333333;
+  }
+  .radio {
+    display: flex;
+    align-items: center;
+    height: 0.88rem;
+    background: #ffffff;
+    border-bottom: 0.02rem solid #ebebeb;
+
+    img {
+      margin: 0 0.16rem 0 0.32rem;
+      width: 0.44rem;
+      height: 0.44rem;
+    }
+    .label {
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #333333;
+    }
+  }
+  :global {
+    .cjm-mobile-button {
+      margin-top: 0.24rem;
+      display: block;
+    }
+  }
+}

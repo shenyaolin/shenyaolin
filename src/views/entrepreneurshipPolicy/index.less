@@ -1,0 +1,316 @@
+.entrepreneurshipPolicy {
+  height: 100%;
+  background: #f7f8fc;
+
+  :global {
+    .cjm-mobile-card-list-wrap {
+      box-sizing: border-box;
+      padding: 0 0.24rem;
+      padding-top: 0.24rem;
+    }
+  }
+
+  .header {
+    padding: 0 0.1875rem;
+    display: flex;
+    height: 0.6563rem;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+
+    :global {
+      .am-search {
+        width: 5.44rem;
+        border: 1px solid #e6e6ea;
+        border-radius: 0.26rem;
+        padding-left: 0.2rem;
+        height: 0.54rem;
+        background: #f2f2f2;
+
+        .am-search-input {
+          background: #f2f2f2;
+        }
+      }
+    }
+
+    .screen {
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #999999;
+
+      &:after {
+        content: "";
+        margin-left: 0.12rem;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        border-width: 0.1rem;
+        border-style: solid dashed dashed dashed;
+        border-color: #a6a6a6 transparent transparent transparent;
+      }
+    }
+
+    .screenNum {
+      color: #26a2ff;
+
+      & > span {
+        &:before {
+          content: "·";
+          padding: 0 0.1rem;
+        }
+      }
+
+      &:after {
+        content: "";
+        border-color: #26a2ff transparent transparent transparent;
+      }
+    }
+  }
+
+  .listItem {
+    display: flex;
+    padding: 0.38rem 0 0.42rem 0;
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    box-shadow: 0rem 0rem 0.2rem rgba(191, 191, 191, 0.1);
+    border-radius: 0.2rem;
+
+    img {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+    }
+
+    .introduce {
+      margin-left: 0.32rem;
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.36rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: #333333;
+      }
+
+      .direction {
+        margin: 0.16rem 0;
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+
+        img {
+          width: 0.28rem;
+          height: 0.28rem;
+          margin-right: 0.1rem;
+        }
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+
+        img {
+          width: 0.28rem;
+          height: 0.28rem;
+          margin-right: 0.1rem;
+        }
+
+        .dial {
+          margin-left: 0.16rem;
+          font-size: 0.28rem;
+          color: #26a2ff;
+        }
+      }
+    }
+  }
+}
+
+.entrepreneurshipPolicyDetail {
+  box-sizing: border-box;
+  // position: relative;
+  background-color: #ffffff;
+  padding: 0.42rem 0.3rem 0rem;
+  min-height: 100%;
+  height: auto;
+  padding-bottom: 0.8rem;
+  .title {
+    color: #474747;
+    font-size: 0.32rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+
+  .secondTit {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .time {
+    color: #cccccc;
+    font-size: 0.22rem;
+    // margin-bottom: 0.55rem;
+  }
+
+  .content {
+    color: #333333;
+    font-size: 0.32rem;
+    margin: 0.55rem 0;
+
+    img {
+      max-width: 100%;
+    }
+
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    video {
+      margin-bottom: 0.32rem;
+      width: 6.86rem !important;
+      border-radius: 0.1rem;
+    }
+  }
+}
+.count {
+  padding: 0 0.3rem;
+  margin-top: -0.8rem;
+  // width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  // position: absolute;
+  // left: 0.24rem;
+  // bottom: 0;
+  font-size: 0.26rem;
+  color: #bfbfbf;
+}
+
+//筛选
+.screenContainer {
+  z-index: 2;
+  top: 0;
+  position: absolute;
+  width: 7.5rem;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  .close {
+    margin: 0.32rem 0 0 0;
+    width: 0.32rem;
+    height: 0.32rem;
+  }
+
+  .screenBox {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0.32rem;
+    background: #fff;
+    background: #ffffff;
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
+    border: 0.02rem solid transparent;
+
+    .state {
+      margin-top: 0.56rem;
+
+      .title {
+        font-size: 0.32rem;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 0.26rem;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .options {
+          width: 2.12rem;
+          height: 0.64rem;
+          background: #f7f7f7;
+          border-radius: 0.32rem;
+          font-size: 0.28rem;
+          font-weight: 400;
+          text-align: center;
+          line-height: 0.64rem;
+          color: #333333;
+          margin-right: 0.46rem;
+        }
+
+        .eventOptions {
+          margin: 0;
+          margin: 0 0.2rem 0.2rem 0;
+
+          &:nth-child(3n) {
+            margin: 0;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+
+        .choose {
+          background: #e4f3ff;
+          border: 0.02rem solid #26a2ff;
+          border-radius: 0.32rem;
+        }
+      }
+
+      .date {
+        align-items: center;
+        justify-content: space-between;
+
+        :global {
+          .cjm-mobile-form-input {
+            width: 3rem;
+            height: 0.72rem;
+            background: #f7f7f7;
+            border-radius: 0.4rem;
+            text-align: center;
+
+            &::-webkit-input-placeholder {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .bottomBtn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.08rem;
+
+      :global {
+        .cjm-mobile-button {
+          margin: 0;
+          border-radius: 0.44rem !important;
+
+          &:first-child {
+            width: 1.98rem !important;
+            height: 0.88rem;
+            border: 0.02rem solid #26a2ff;
+            background: #fff;
+            color: #333;
+          }
+
+          &:last-child {
+            width: 4.58rem !important;
+            height: 0.88rem;
+            background: #26a2ff;
+          }
+        }
+      }
+    }
+  }
+}

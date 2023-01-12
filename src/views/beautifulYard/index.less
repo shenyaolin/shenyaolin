@@ -1,0 +1,238 @@
+.beautifulYard {
+  height: 100%;
+  background: #f7f8fc;
+
+  :global {
+    .cjm-mobile-card-list-wrap {
+      box-sizing: border-box;
+      padding: 0 0.24rem;
+      padding-top: 0.24rem;
+    }
+  }
+
+  .header {
+    padding: 0 0.1875rem;
+    display: flex;
+    height: 0.6563rem;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+
+    :global {
+      .am-search {
+        width: 5.44rem;
+        border: 1px solid #e6e6ea;
+        border-radius: 0.26rem;
+        padding-left: 0.2rem;
+        height: 0.54rem;
+        background: #f2f2f2;
+
+        .am-search-input {
+          background: #f2f2f2;
+        }
+      }
+    }
+
+    .screen {
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #999999;
+
+      &:after {
+        content: "";
+        margin-left: 0.12rem;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        border-width: 0.1rem;
+        border-style: solid dashed dashed dashed;
+        border-color: #a6a6a6 transparent transparent transparent;
+      }
+    }
+
+    .screenNum {
+      color: #26a2ff;
+
+      &>span {
+        &:before {
+          content: "·";
+          padding: 0 0.1rem;
+        }
+      }
+
+      &:after {
+        content: "";
+        border-color: #26a2ff transparent transparent transparent;
+      }
+    }
+  }
+
+  .listItem {
+    padding: 0.38rem 0.32rem 0.42rem 0.32rem;
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    box-shadow: 0rem 0rem 0.2rem rgba(191, 191, 191, 0.1);
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+
+    img {
+      display: block;
+      width: 100%;
+      margin: 0.24rem 0;
+      border-radius: 5%;
+    }
+
+    .introduce {
+      .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+        font-size: 0.36rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+
+        &>div:nth-child(2) {
+          font-size: 0.32rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #26a2ff;
+        }
+      }
+
+      .direction {
+        line-height: 0.56rem;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+      }
+    }
+  }
+}
+
+.beautifulYardDetail {
+  position: relative;
+  background-color: rgba(247, 248, 252, 1);
+  min-height: 100%;
+
+  :global {
+
+    .am-carousel,
+    .slider-frame,
+    .slider-list {
+      width: 100%;
+      height: 3.68rem !important;
+      border-radius: 0.12rem;
+
+      img {
+        width: 100%;
+        height: 100% !important;
+      }
+    }
+  }
+
+  .top {
+    box-sizing: border-box;
+    padding: 0.32rem 0.3rem 0;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 0.18rem;
+
+    &:last-child {
+      .title {
+        margin: 0;
+      }
+    }
+  }
+
+  .header {
+    width: 100%;
+    height: 3.68rem;
+    border-radius: 0.12rem;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #474747;
+    font-size: 0.32rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
+
+    &>div:nth-child(2) {
+      width: 1.44rem;
+      line-height: 0.52rem;
+      background: #ff5c00;
+      border-radius: 0.06rem;
+      font-size: 0.32rem;
+      text-align: center;
+      font-family: SourceHanSansCN-Regular;
+      color: #ffffff;
+    }
+  }
+
+  .secondTit {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .yardInfo {
+    .item {
+      font-size: 0.28rem;
+      color: #666666;
+      width: 100%;
+      display: flex;
+      height: 0.88rem;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: #e6e6e6 1px solid;
+
+      div:nth-child(2) {
+        color: #333333;
+      }
+
+      &:nth-last-child(1) {
+        border: none;
+      }
+    }
+  }
+
+  .time {
+    color: #cccccc;
+    font-size: 0.22rem;
+  }
+
+  .content {
+    color: #333333;
+    font-size: 0.32rem;
+    margin-top: 0.55rem;
+
+    img {
+      max-width: 100%;
+    }
+
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    video {
+      margin-bottom: 0.32rem;
+      width: 6.86rem !important;
+      border-radius: 0.1rem;
+    }
+  }
+
+  .count {
+    box-sizing: border-box;
+    width: 95%;
+    margin: 0 auto;
+    // padding: 0 0.24rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    margin-top: 0.3rem;
+    font-size: 0.26rem;
+    color: #bfbfbf;
+    border-top: #e6e6e6 1px solid;
+  }
+}

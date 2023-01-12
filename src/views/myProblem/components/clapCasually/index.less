@@ -1,0 +1,1022 @@
+.clapCasuallyContainer {
+  height: 90%;
+
+  .villagerEnd {
+    background: RGBA(247, 248, 252, 1);
+
+    .noData {
+      background: #fff;
+      margin: 0 auto;
+      text-align: center;
+      font-family: SourceHanSansCN-Regular;
+
+      img {
+        margin-top: 0.9rem;
+        width: 3.46rem;
+        height: 2.82rem;
+      }
+
+      .noText {
+        margin: 0.24rem 0;
+        font-size: 0.32rem;
+        line-height: 0.32rem;
+        color: #666666;
+      }
+
+      .prompt {
+        margin-bottom: 0.4rem;
+        font-size: 0.28rem;
+        line-height: 0.32rem;
+        color: #999999;
+      }
+
+      :global {
+        .cjm-mobile-button {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .listItem {
+      margin-top: 0.16rem;
+      padding: 0.32rem 0.4rem;
+      background: #ffffff;
+      opacity: 1;
+      border-radius: 0.2rem;
+
+      .box {
+        display: flex;
+        justify-content: space-between;
+
+        .description {
+          margin-right: 0.58rem;
+          width: 5.04rem;
+          font-size: 0.28rem;
+          line-height: 0.44rem;
+          color: #333333;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        .type {
+          width: 1.08rem;
+          height: 0.42rem;
+          line-height: 0.42rem;
+          font-size: 0.26rem;
+          border-radius: 0.06rem;
+          text-align: center;
+        }
+
+        .eventColor1 {
+          background: #ffe3d4;
+          color: #ff5c00;
+        }
+
+        .eventColor2 {
+          background: #c9f3e3;
+          color: #00b772;
+        }
+
+        .eventColor3 {
+          background: #c9f3e3;
+          color: #00b772;
+        }
+
+        .images {
+          display: flex;
+          margin-bottom: 0.24rem;
+
+          img {
+            margin-top: 0.24rem;
+            border-radius: 0.2rem;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .images1 {
+          width: 100%;
+
+          img {
+            width: 4.3rem;
+            height: 4.3rem;
+          }
+        }
+
+        .images2 {
+          width: 100%;
+          justify-content: space-between;
+
+          img {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+        }
+
+        .images3 {
+          width: 100%;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          img {
+            width: 2.1rem;
+            height: 2.1rem;
+          }
+        }
+
+        .villageName {
+          font-size: 0.26rem;
+          font-family: SourceHanSansCN-Regular;
+          line-height: 0.32rem;
+          color: #999999;
+        }
+
+        .createTime {
+          font-size: 0.26rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #bfbfbf;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .topHeader {
+      height: 0.88rem;
+      background: #ffffff;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 0.22rem 0 0.32rem;
+
+      // .address {
+      //   font-size: 0.28rem;
+      //   font-family: SourceHanSansCN-Regular;
+      //   color: #333333;
+      //   :global {
+      //     .cjm-mobile-form-input {
+      //       width: 0;
+      //       height: 0;
+      //     }
+      //   }
+      //   &:after {
+      //     content: "";
+      //     margin-left: 0.12rem;
+      //     width: 0;
+      //     height: 0;
+      //     overflow: hidden;
+      //     font-size: 0;
+      //     line-height: 0;
+      //     border-width: 0.1rem;
+      //     border-style: solid dashed dashed dashed;
+      //     border-color: #a6a6a6 transparent transparent transparent;
+      //   }
+      // }
+
+      .screen {
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #999999;
+
+        &:after {
+          content: "";
+          margin-left: 0.12rem;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          font-size: 0;
+          line-height: 0;
+          border-width: 0.1rem;
+          border-style: solid dashed dashed dashed;
+          border-color: #a6a6a6 transparent transparent transparent;
+        }
+      }
+
+      .screenNum {
+        color: #26a2ff;
+
+        &>span {
+          &:before {
+            content: "·";
+            padding: 0 0.1rem;
+          }
+        }
+
+        &:after {
+          content: "";
+          border-color: #26a2ff transparent transparent transparent;
+        }
+      }
+    }
+
+    // .bottomBtn {
+    //   background: #fff;
+    //   width: 100%;
+    //   height: 1.1rem;
+    //   :global {
+    //     .cjm-mobile-button {
+    //       margin-top: 0.1rem;
+    //       width: 6.9rem;
+    //       height: 0.88rem;
+    //     }
+    //   }
+    // }
+  }
+
+  .villageCommittee {
+    .header {
+      padding: 0 0.1875rem;
+      display: flex;
+      height: 0.6563rem;
+      background: #ffffff;
+      align-items: center;
+      justify-content: space-between;
+
+      :global {
+        .am-search {
+          width: 5.44rem;
+          border: 1px solid #e6e6ea;
+          border-radius: 0.26rem;
+          padding-left: 0.2rem;
+          height: 0.54rem;
+          background: #f2f2f2;
+
+          .am-search-input {
+            background: #f2f2f2;
+          }
+        }
+      }
+
+      .screen {
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #999999;
+
+        &:after {
+          content: "";
+          margin-left: 0.12rem;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          font-size: 0;
+          line-height: 0;
+          border-width: 0.1rem;
+          border-style: solid dashed dashed dashed;
+          border-color: #a6a6a6 transparent transparent transparent;
+        }
+      }
+
+      .screenNum {
+        color: #26a2ff;
+
+        &>span {
+          &:before {
+            content: "·";
+            padding: 0 0.1rem;
+          }
+        }
+
+        &:after {
+          content: "";
+          border-color: #26a2ff transparent transparent transparent;
+        }
+      }
+    }
+
+    .content {
+      padding: 0 0.1875rem;
+      height: 100%;
+
+      .tabs {
+        height: 0.6875rem;
+
+        .tab {
+          position: relative;
+          line-height: 0.6875rem;
+          margin-right: 0.4844rem;
+          display: inline-block;
+          font-size: 0.2344rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #a6a6a6;
+
+          img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.0781rem;
+          }
+        }
+
+        .tabActive {
+          font-size: 0.2656rem;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: #333333;
+        }
+      }
+
+      .listItem {
+        padding: 0 0.1875rem;
+        background: #ffffff;
+        border-radius: 0.1563rem;
+        margin-bottom: 0.24rem;
+
+        .head {
+          height: 0.6563rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 0.02rem solid #eee;
+
+          .title {
+            font-size: 0.2344rem;
+            font-weight: bold;
+            color: #333333;
+          }
+
+          .date {
+            font-size: 0.2031rem;
+            color: #bfbfbf;
+          }
+        }
+
+        .main {
+          margin-top: 0.24rem;
+
+          .mainItem {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.2344rem;
+
+            .mainLabel {
+              margin-right: 0.24rem;
+              width: 1.12rem;
+              font-size: 0.2031rem;
+              color: #666666;
+            }
+
+            .mainContent {
+              color: #333333;
+              font-size: 0.28rem;
+            }
+          }
+
+          .btn {
+            height: 0.6rem;
+            padding-bottom: 0.32rem;
+
+            button {
+              float: right;
+              width: 1.72rem;
+              height: 0.6rem;
+              border: 0.02rem solid #26a2ff;
+              border-radius: 0.3rem;
+              background-color: #fff;
+            }
+
+            div {
+              float: right;
+              width: 1.72rem;
+              height: 0.6rem;
+              line-height: 0.6rem;
+              text-align: center;
+              background: #f7f7f7;
+              border-radius: 0.32rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.formBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .formItem {
+    display: flex;
+    flex-direction: column;
+
+    :global {
+      .cjm-mobile-form-item-label {
+        padding: 0.3rem 0 0 0.16rem;
+
+        .cjm-mobile-form-item-require-star {
+          top: 0.36rem;
+          left: 0;
+        }
+      }
+    }
+
+    &:first-child {
+      height: 2.64rem;
+
+      .checkList {
+        margin-top: 0.06rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .checked {
+          margin: 0.24rem 0.16rem 0 0;
+          width: 1.6rem;
+          line-height: 0.6rem;
+          background: #f7f7f7;
+          text-align: center;
+          border-radius: 0.44rem;
+          font-size: 0.26rem;
+          color: #333333;
+        }
+
+        .choose {
+          background: #e4f3ff;
+          color: #26a2ff;
+          border: 0.02rem solid #26a2ff;
+          border-radius: 0.44rem;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .textNum {
+        margin: 0 0 0.32rem 6rem;
+        width: 0.74rem;
+        height: 0.3rem;
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        line-height: 0.32rem;
+        color: #bfbfbf;
+      }
+    }
+  }
+
+  :global {
+    .cjm-mobile-form-item {
+      padding: 0 0.2rem;
+
+      .cjm-mobile-form-item-label {
+        padding: 0.32rem 0 0 0.32rem;
+        // width: 1.12rem;
+        margin-right: 0.92rem;
+      }
+
+      .cjm-mobile-form-item-content {
+        width: 100%;
+
+        .cjm-mobile-form-textarea {
+          padding: 0.18rem 0 0 0;
+          height: 2.64rem;
+        }
+
+        .cjm-mobile-image-upload {
+          padding-right: 0.32rem;
+          width: 4.84rem;
+        }
+      }
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 0.16rem;
+      }
+    }
+  }
+
+  .submitBtn {
+    margin-top: 0.4rem;
+  }
+}
+
+//筛选
+.screenContainer {
+  z-index: 2;
+  top: 0;
+  position: absolute;
+  width: 7.5rem;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+
+  .screenBox {
+    position: absolute;
+    bottom: 0;
+    padding: 0 0.32rem;
+    background: #fff;
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
+    border: 0.02rem solid transparent;
+
+    .close {
+      margin: 0.32rem 0 0 0;
+      width: 0.32rem;
+      height: 0.32rem;
+    }
+
+    .state {
+      margin-top: 0.56rem;
+
+      .title {
+        font-size: 0.32rem;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 0.26rem;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: space-around;
+        .options {
+          width: 1.6rem;
+          height: 0.64rem;
+          background: #f7f7f7;
+          border-radius: 0.32rem;
+          font-size: 0.28rem;
+          font-weight: 400;
+          text-align: center;
+          line-height: 0.64rem;
+          color: #333333;
+        }
+
+        .eventOptions {
+          margin: 0;
+          margin: 0 0.2rem 0.2rem 0;
+
+          &:nth-child(3n) {
+            margin: 0;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+
+        .choose {
+          background: #e4f3ff;
+          border: 0.02rem solid #26a2ff;
+          border-radius: 0.32rem;
+        }
+      }
+
+      .date {
+        align-items: center;
+        justify-content: space-between;
+
+        :global {
+          .cjm-mobile-form-input {
+            width: 3rem;
+            height: 0.72rem;
+            background: #f7f7f7;
+            border-radius: 0.4rem;
+            text-align: center;
+
+            &::-webkit-input-placeholder {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .bottomBtn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.08rem;
+
+      :global {
+        .cjm-mobile-button {
+          margin: 0;
+          border-radius: 0.44rem !important;
+
+          &:first-child {
+            width: 1.98rem !important;
+            height: 0.88rem;
+            border: 0.02rem solid #26a2ff;
+            background: #fff;
+            color: #333;
+          }
+
+          &:last-child {
+            width: 4.58rem !important;
+            height: 0.88rem;
+            background: #26a2ff;
+          }
+        }
+      }
+    }
+  }
+}
+
+//详情
+.details {
+  padding: 0 0.32rem;
+  // height: 100%;
+  background: #fff;
+
+  .subject {
+    padding-bottom: 0.34rem;
+    border-bottom: 0.02rem solid #e6e6e6;
+
+    .headerTitle {
+      padding-top: 0.24rem;
+      font-size: 0.32rem;
+      font-weight: 500;
+      color: #333333;
+    }
+
+    .center {
+      margin: 0.24rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .subjectList {
+        width: 1.6rem;
+        height: 0.56rem;
+        background: #f7f7f7;
+        border-radius: 0.44rem;
+        font-size: 0.26rem;
+        color: #333333;
+        text-align: center;
+        line-height: 0.56rem;
+      }
+
+      .createTime {
+        font-size: 0.26rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #bfbfbf;
+      }
+    }
+
+    .description {
+      font-size: 0.28rem;
+      line-height: 0.44rem;
+      color: #333333;
+    }
+
+    .images {
+      display: flex;
+      margin: 0.24rem 0;
+
+      img {
+        border-radius: 0.2rem;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .images1 {
+      width: 100%;
+
+      img {
+        width: 4.3rem;
+        height: 4.3rem;
+      }
+    }
+
+    .images2 {
+      width: 100%;
+      justify-content: space-between;
+
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
+
+    .images3 {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      img {
+        width: 2.1rem;
+        height: 2.1rem;
+      }
+    }
+
+    .villageName {
+      font-size: 0.26rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #999999;
+    }
+  }
+
+  .steps {
+    margin-top: 0.4rem;
+
+    .bottomHeader {
+      font-size: 0.32rem;
+      font-weight: 500;
+      color: #333333;
+      margin-bottom: 0.32rem;
+    }
+
+    .progress_box {
+      width: 100%;
+      height: 100%;
+
+      li {
+        position: relative;
+        padding: 0 0.42rem;
+        list-style: none;
+        border-left: 0.04rem solid #d9d9d9;
+
+        &:nth-child(2) {
+          border: none;
+        }
+
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+
+      li:before {
+        content: "●";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -0.14rem;
+        width: 0.28rem;
+        height: 0.28rem;
+        line-height: 0.23rem;
+        text-align: center;
+        background: rgba(221, 221, 221, 0.5);
+        color: #bfbfbf;
+        font-size: 0.36rem;
+        border-radius: 50%;
+      }
+
+      .progress {
+        font-size: 0.28rem;
+        font-family: Source Han Sans CN;
+        color: #a6a6a6;
+        padding: 0;
+
+        &::before {
+          content: "";
+          display: none;
+        }
+      }
+
+      .last_progress {
+        height: 1.76rem;
+        padding-bottom: 0.34rem;
+      }
+
+      .leavingImgs {
+        height: 3.48rem;
+      }
+
+      .last_progress::before {
+        content: "●";
+        display: table-cell;
+        position: absolute;
+        vertical-align: middle;
+        left: -0.14rem;
+        width: 0.28rem;
+        height: 0.28rem;
+        line-height: 0.23rem;
+        text-align: center;
+        background: rgba(75, 172, 253, 0.3);
+        color: #4bacfd;
+        font-size: 0.36rem;
+        border-radius: 50%;
+      }
+
+      .progress_content {
+        position: absolute;
+        top: -0.08rem;
+      }
+
+      .progress_title {
+        font-size: 0.3rem;
+        color: #222;
+        margin-bottom: 0.06rem;
+      }
+
+      .stepHeader {
+        display: flex;
+        align-items: center;
+
+        &>div {
+          &:first-child {
+            font-size: 0.3rem;
+            font-weight: 500;
+          }
+
+          &:nth-child(2) {
+            margin-left: 0.12rem;
+            font-size: 0.26rem;
+          }
+        }
+      }
+
+      .stepHeader1 {
+        color: #999999;
+
+        &>div:last-child {
+          color: #bfbfbf;
+        }
+      }
+
+      .message {
+        padding: 0.32rem;
+        margin-top: 0.24rem;
+        width: 100%;
+        background: #fafafa;
+        border-radius: 0.2rem;
+
+        .leavingMessage {
+          font-size: 0.28rem;
+          color: #333333;
+        }
+
+        .imgMessage {
+          margin-top: 0.24rem;
+          display: flex;
+
+          img {
+            width: 1.48rem;
+            height: 1.48rem;
+            border-radius: 0.2rem;
+          }
+        }
+      }
+
+      .progress_time {
+        color: #999999;
+        font-size: 0.24rem;
+      }
+
+      .active {
+        color: #2ba0ff;
+      }
+    }
+  }
+
+  .steps1 {
+    padding-bottom: 1.08rem;
+  }
+
+  .evaluate {
+    margin-top: 0.4rem;
+    padding-bottom: 1.08rem;
+
+    .bottomHeader {
+      font-size: 0.32rem;
+      font-weight: 500;
+      color: #333333;
+      margin-bottom: 0.32rem;
+    }
+
+    .content {
+      margin-top: 0.32rem;
+      font-size: 0.3rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #26a2ff;
+    }
+  }
+
+  .acceptanceBtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.08rem;
+    background: #ffffff;
+    border-top: 0.02rem solid #ededed;
+
+    :global {
+      .cjm-mobile-button {
+        margin-top: 0.1rem;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+//受理
+.acceptanceContainer {
+  overflow: hidden;
+
+  .formItem {
+    .textNum {
+      margin: 0 0 0.32rem 6rem;
+      width: 0.74rem;
+      height: 0.3rem;
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      line-height: 0.32rem;
+      color: #bfbfbf;
+    }
+  }
+
+  :global {
+    .cjm-mobile-form-item {
+      padding: 0 0.2rem;
+
+      .cjm-mobile-form-item-label {
+        padding: 0.3rem 0 0 0.16rem;
+
+        .cjm-mobile-form-item-require-star {
+          top: 0.36rem;
+          left: 0;
+        }
+      }
+
+      .cjm-mobile-form-item-content {
+        width: 100%;
+
+        .cjm-mobile-form-textarea {
+          padding: 0.18rem 0 0 0;
+          height: 2.64rem;
+        }
+
+        .cjm-mobile-image-upload {
+          padding-right: 0.32rem;
+          width: 4.84rem;
+        }
+      }
+
+      &:first-child {
+        margin-bottom: 0.16rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// 返回列表
+.returnList {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image {
+    margin-top: 0.96rem;
+    width: 1.56rem;
+    height: 1.78rem;
+    background: linear-gradient(180deg, #def2ff 0%, #78c0f2 100%);
+    box-shadow: 0rem 0.1rem 0.2rem #d9eeff;
+    border-radius: 0.2rem;
+  }
+
+  .tips {
+    margin: 1.08rem 0;
+    font-size: 0.32rem;
+    font-family: SourceHanSansCN-Regular;
+    color: #666666;
+  }
+
+  button {
+    width: 6.86rem;
+    height: 0.88rem;
+    background: #26a2ff;
+    border-radius: 0.44rem;
+    font-size: 0.3rem;
+    font-family: MicrosoftYaHei;
+    color: #ffffff;
+  }
+}
+
+//评价
+.evaluateContainer {
+  height: 100%;
+
+  .promptLanguage {
+    padding: 0.34rem 0 0.34rem 0.26rem;
+    font-size: 0.32rem;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    color: #333333;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    height: 0.88rem;
+    background: #ffffff;
+    border-bottom: 0.02rem solid #ebebeb;
+
+    img {
+      margin: 0 0.16rem 0 0.32rem;
+      width: 0.44rem;
+      height: 0.44rem;
+    }
+
+    .label {
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #333333;
+    }
+  }
+}

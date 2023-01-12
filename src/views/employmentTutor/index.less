@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+.employmentTutorContainer {
+  height: 100%;
+  background: #f7f8fc;
+  :global {
+    .am-search {
+      background: #f7f8fc;
+      .am-search-input {
+        border: 0.02rem solid #e6e6ea;
+        border-radius: 0.28rem;
+      }
+    }
+    .cjm-mobile-card-list-wrap {
+      padding: 0 0.24rem;
+    }
+  }
+  .listItem {
+    display: flex;
+    padding: 0.38rem 0 0.42rem 0.32rem;
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    box-shadow: 0rem 0rem 0.2rem rgba(191, 191, 191, 0.1);
+    border-radius: 0.2rem;
+    img {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+    }
+    .introduce {
+      margin-left: 0.32rem;
+      display: flex;
+      flex-direction: column;
+      .name {
+        font-size: 0.36rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: #333333;
+      }
+      .direction {
+        margin: 0.16rem 0;
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+        img {
+          width: 0.28rem;
+          height: 0.28rem;
+          margin-right: 0.1rem;
+        }
+        div {
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+      .phone {
+        display: flex;
+        align-items: center;
+        font-size: 0.28rem;
+        color: #a6a6a6;
+        img {
+          width: 0.28rem;
+          height: 0.28rem;
+          margin-right: 0.1rem;
+        }
+        .dial {
+          margin-left: 0.16rem;
+          font-size: 0.28rem;
+          color: #26a2ff;
+          &:visited {
+            color: #fff !important;
+          }
+          &:hover {
+            color: #fff !important;
+          }
+        }
+        .dial1 {
+          margin-left: 0.16rem;
+          font-size: 0.28rem;
+          color: #26a2ff;
+        }
+      }
+    }
+  }
+}
+
+.employmentDetailContainer {
+  padding-bottom: 1.3rem;
+  position: relative;
+  // height: 100%;
+  .positionBox {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #006fff 0%, #7bd2fc 67%, #f7f8fc 100%);
+  }
+  .content {
+    .header {
+      display: flex;
+      padding: 0.6rem 0.68rem 0.26rem 0.38rem;
+      img {
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+      }
+      .right {
+        margin: 0.26rem 0 0 0.12rem;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        width: 100%;
+        .name {
+          font-size: 0.36rem;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+        }
+        .lxfs {
+          margin: 0.2rem 0;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 0.06rem;
+            vertical-align: middle;
+            width: 0.24rem;
+            height: 0.24rem;
+          }
+        }
+        .direction {
+          font-size: 0.26rem;
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+        }
+      }
+    }
+    .briefIntroduction {
+      margin: 0 0.24rem;
+      padding: 0.4rem 0.42rem 0.4rem 0.4rem;
+      background: #ffffff;
+      box-shadow: 0rem 0rem 0.24rem rgba(153, 153, 153, 0.1);
+      border-radius: 0.2rem;
+      div {
+        font-size: 0.28rem;
+        color: #333333;
+        &:first-child {
+          margin-bottom: 0.32rem;
+        }
+        &:last-child {
+          line-height: 0.44rem;
+        }
+      }
+    }
+    .footer {
+      padding: 0.1rem 0.3rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1.1rem;
+      background: #fff;
+      a {
+        display: inline-block;
+        width: 6.9rem;
+        line-height: 0.88rem;
+        text-align: center;
+        background: #26a2ff;
+        border-radius: 0.44rem;
+        font-size: 0.3rem;
+        font-family: MicrosoftYaHei;
+        color: #ffffff;
+      }
+    }
+  }
+}

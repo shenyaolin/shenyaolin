@@ -1,0 +1,57 @@
+@import "../theme";
+
+.icon(@url) {
+  display: inline-block;
+  background-image: url(@url);
+  width: unit(image-width(@url), rem)/@font-size-base;
+  height: unit(image-height(@url),rem)/@font-size-base;
+  background-size: unit(image-width(@url),rem)/@font-size-base unit(image-height(@url),rem)/@font-size-base;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+:global {
+  // .right-arrow-icon {
+  //   .icon('../../images/arrow.png');
+  // }
+
+  // .check-icon {
+  //   .icon('../../images/checked-icon.png');
+  // }
+
+  // .remove-icon {
+  //   .icon('../../images/remove-icon.png');
+  // }
+
+  // .remove-icon-1 {
+  //   .icon('../../images/remove-icon-1.png');
+  // }
+
+  // .active-primary-icon {
+  //   .icon('../../images/checked-primary-icon.png');
+  // }
+  
+  // .theme-blue .active-primary-icon {
+  //   .icon('../../images/theme-blue-checked-primary-icon.png');
+  // }
+
+  // .primary-add-icon {
+  //   .icon('../../images/primary-add-icon.png');
+  // }
+
+  // .theme-blue .primary-add-icon {
+  //   .icon('../../images/theme-blue-primary-add-icon.png');
+  // }
+
+  // .password-icon {
+  //   .icon('../../images/password-icon.png');
+  // }
+
+  // .mobile-icon {
+  //   .icon('../../images/mobile-icon.png');
+  // }
+
+  // .shield-icon {
+  //   .icon('../../images/shield-icon.png');
+  // }
+}

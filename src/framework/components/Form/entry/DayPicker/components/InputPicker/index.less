@@ -1,0 +1,26 @@
+.inputWrap {
+  width: 100%;
+  display: flex;
+  border: 1px solid #d9d9d9;
+  height: 32px;
+  border-radius: 4px;
+  input {
+    border: none;
+    width: 40%;
+    margin: 4px 10px;
+    &:hover, &:focus {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #40a9ff;
+    }
+  }
+  .icon {
+    width: 15px;
+    line-height: 32px;
+    color: #999999;
+  }
+}
+.inputWrapFocus {
+  border: 1px solid #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+}

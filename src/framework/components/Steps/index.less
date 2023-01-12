@@ -1,0 +1,153 @@
+/*
+ * @Author: xutengfeng 基于郑吴行代码
+ * @Date: 2019-08-12 14:32:08
+ * @Last Modified by: xutengfeng
+ * @Last Modified time: 2019-08-20 11:42:23
+ */
+@import '~framework/assets/css/theme.less';
+
+.stepGroup {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.stepItem {
+  display: flex;
+
+  &:not(:last-child) {
+    flex: 1;
+  }
+
+  .inner {
+    @roundSize: 33px;
+    @roundBorderWidth: 2px;
+    @roundWidth: @roundSize - @roundBorderWidth*2;
+    @roundHeight: @roundWidth;
+    position: relative;
+    width: 51px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: top;
+
+    .round {
+      width: @roundWidth;
+      height: @roundHeight;
+      line-height: @roundHeight;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: @roundBorderWidth solid @border-color;
+      font-size: 16px;
+      color: @border-color;
+      font-family: 'Microsoft YaHei';
+      margin: 0 auto;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 16px;
+        margin-top: 5px;
+      }
+    }
+
+    .label {
+      // position: absolute;
+      // left: 50%;
+      // width: 200%;
+      // transform: translateX(-50%);
+      margin-top: 10px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .info {
+      white-space: pre;
+      text-align: center;
+      margin-top: 5px;
+      font-family: MicrosoftYaHei;
+      color: #999999;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .connectLine {
+    display: flex;
+    flex: 1;
+    vertical-align: top;
+    height: 1px;
+    background-color: @border-color;
+  }
+
+  &.error {
+    .inner .round {
+      border: none;
+      background: transparent;
+      width: 33px;
+      height: 33px;
+    }
+
+    :global {
+      .am-icon-lg {
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+
+  &.pass {
+    .round {
+      border-color: @primary-color;
+      color: @primary-color;
+
+      .checkIcon {
+        vertical-align: top;
+        margin-top: 5px;
+      }
+    }
+
+    .connectLine {
+      background-color: @primary-color;
+    }
+  }
+
+  &.current {
+    .round {
+      background-color: @primary-color;
+      border-color: @primary-color;
+      color: #ffffff;
+    }
+  }
+}
+
+
+:global {
+  .theme-blue {
+    :local {
+      .stepItem {
+        &.pass {
+          .round {
+            border-color: @theme-blue-primary-color;
+            color: @theme-blue-primary-color;
+          }
+
+          .connectLine {
+            background-color: @theme-blue-primary-color;
+          }
+        }
+
+        &.current {
+          .round {
+            background-color: @theme-blue-primary-color;
+            border-color: @theme-blue-primary-color;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

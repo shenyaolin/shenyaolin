@@ -1,0 +1,177 @@
+.mineContainer {
+  padding: 0 0.32rem;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(197, 245, 255, 0.11) 0%,
+    rgba(170, 212, 255, 0.11) 20%,
+    rgba(247, 248, 252, 1) 40%
+  );
+  .myMessage {
+    width: 6.96rem;
+    padding: 0.34rem 0 0.4rem 0;
+    height: 1.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .portrait {
+      display: flex;
+      height: 1.08rem;
+      img {
+        border-radius: 50%;
+        width: 1.08rem;
+        height: 100%;
+      }
+    }
+    .message {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.12rem 0 0.16rem 0.16rem;
+      .messageItem {
+        display: flex;
+        align-items: center;
+        .name {
+          font-size: 0.32rem;
+          font-weight: bold;
+          line-height: 0.32rem;
+          color: #333333;
+        }
+        .identity {
+          margin-left: 0.12rem;
+          display: inline-block;
+          width: 0.76rem;
+          height: 0.36rem;
+          border: 0.02rem solid #ffffff;
+          background: linear-gradient(90deg, #26a2ff 0%, #2977eb 100%);
+          border-radius: 0.06rem;
+          font-size: 0.24rem;
+          line-height: 0.32rem;
+          color: #ffffff;
+          text-align: center;
+        }
+        .photo {
+          font-size: 0.26rem;
+          line-height: 0.32rem;
+          color: #bfbfbf;
+        }
+        .essential {
+          display: flex;
+          align-items: center;
+          margin-left: 0.24rem;
+          font-size: 0.26rem;
+          line-height: 0.32rem;
+          color: #999999;
+          img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    .changeUser {
+      width: 2rem;
+      height: 0.68rem;
+      font-size: 0.22rem;
+      color: #bfbfbf;
+      :global {
+        .cjm-mobile-button {
+          width: 80% !important;
+        }
+      }
+      .submitButton {
+        // width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .authentication {
+    margin-bottom: 0.32rem;
+    background: url("../../assets/images/newImg/authentication-background.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.96rem;
+    height: 1rem;
+    background: #d5eefb;
+    border-radius: 0.5rem;
+    .content {
+      display: flex;
+      align-items: center;
+      font-size: 0.28rem;
+      color: #26a2ff;
+      & > span:first-child {
+        display: inline-block;
+        width: 0.96rem;
+        border-radius: 0.5rem;
+        img {
+          display: block;
+          width: 0.42rem;
+          height: 0.42rem;
+          margin: 0 auto;
+        }
+      }
+    }
+    .rightContent {
+      margin-right: 0.3rem;
+      height: 0.6rem;
+      width: 1.8rem;
+      border-radius: 0.3rem;
+      font-size: 0.26rem;
+      line-height: 0.6rem;
+      background: #26a2ff;
+      color: #ffffff;
+      text-align: center;
+    }
+    .rightContent1 {
+      color: #26a2ff;
+      background: none;
+    }
+  }
+  .modular {
+    height: 100%;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-bottom: 0.16rem;
+  }
+  .modularBox {
+    padding: 0 0.36rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6.86rem;
+    height: 0.98rem;
+    background: #fff;
+    .left {
+      font-size: 0.28rem;
+      font-weight: 500;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      img {
+        width: 0.36rem;
+        height: 0.36rem;
+        margin-right: 0.08rem;
+      }
+    }
+    .right {
+      width: 0.28rem;
+      height: 0.28rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    // &:active,
+    // &:hover {
+    //   background: #ccc;
+    //   opacity: 0.5;
+    //   overflow: hidden;
+    //   color: #fff !important;
+    //   .left {
+    //     color: #fff !important;
+    //   }
+    // }
+  }
+}

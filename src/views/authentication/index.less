@@ -1,0 +1,49 @@
+.authenticationContainer {
+  background: #fff;
+  height: 100%;
+  padding: 0 0.24rem;
+  .promptLanguage {
+    padding: 0.44rem 0 0.24rem 0;
+    font-size: 0.32rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  .formBox {
+    :global {
+      .cjm-mobile-form-item {
+        display: flex;
+        flex-direction: column;
+        .cjm-mobile-form-item-label {
+          padding: 0;
+          padding-top: 0.32rem;
+          padding-left: 0.3rem;
+          // width: 1.12rem;
+          font-size: 0.28rem;
+          line-height: 0.34rem;
+          color: #666666;
+        }
+        .cjm-mobile-form-item-require-star {
+          top: 0.32rem;
+        }
+        .cjm-mobile-form-input {
+          font-size: 0.32rem;
+          font-family: SourceHanSansCN-Regular;
+          line-height: 0.34rem;
+        }
+        .cjm-mobile-form-item-content,
+        .cjm-mobile-form-input {
+          width: 100%;
+        }
+        &:last-child {
+          border-bottom: 0.02rem solid #eee;
+        }
+      }
+    }
+  }
+  :global {
+    .cjm-mobile-button {
+      margin-top: 3.04rem;
+      margin-left: 0;
+    }
+  }
+}

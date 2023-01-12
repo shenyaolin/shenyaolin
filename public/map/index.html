@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手绘地图</title>
+  <!-- <script type="text/javascript" src="https://gis.kf315.net/api/mapbox.js"></script> -->
+  <script type="text/javascript" src="https://gis.jgwcjm.com/api/mapbox.js"></script>
+  <!-- <script type="text/javascript" src="https://gis.kf315.net/js/jquery.min.js"></script> -->
+  <script src="https://gis.jgwcjm.com/js/jquery.min.js" type="text/javascript"></script>
+  <style lang="less">
+    #map {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      position: absolute;
+      width: auto;
+      height: auto;
+      left: 0;
+    }
+
+    #typeList {
+      position: absolute;
+      width: 200px;
+      height: auto;
+      right: 0;
+      background-color: antiquewhite;
+    }
+
+    .located {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+
+    .popover {
+      position: absolute;
+      width: 210px;
+      height: 200px;
+      z-index: 2;
+      background-color: #fff;
+      border-radius: 4px;
+    }
+
+    .popover .content {
+      width: 100%;
+    }
+
+    .popoverImg {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      height: 108px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+
+    .popoverName {
+      margin: 0;
+      padding: 0;
+      color: #666666;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-indent: 10px;
+      border-bottom: 1px solid #EBEBEB;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .btns {
+      display: flex;
+    }
+
+    .btnItem {
+      width: 50%;
+      text-align: center;
+      color: #333333;
+      height: 50px;
+      line-height: 50px;
+    }
+  </style>
+  <script type="text/javascript">
+    let fileDomain = "https://filetest.jgwcjm.com";
+    const isDev =
+      window.location.href.indexOf("http://localhost") === 0 ||
+      window.location.href.indexOf("http://192.168") === 0 ||
+      window.location.href.indexOf("http://127.0.0.1") === 0;
+    // 是否是测试环境
+    const isTesting = window.location.href.indexOf(".kf315.net") >= 0;
+    // 是否是生产环境
+    const isProduction = !(isDev || isTesting);
+    if (isProduction) {
+      fileDomain = "https://file.jgwcjm.com";
+    }
+
+    function imageSrc(imgId) {
+      if (typeof imgId === 'string') {
+        return imgId.indexOf('http') >= 0 ? imgId : `${fileDomain}/${imgId}?imageView2/2/w/800`;
+      }
+      return '';
+    }
+    let isDestroy = false;
+    let time = 0;
+    let currentTab = "示范茶园";
+    let interfaceData = {}
+    const PNGS = [
+      "景点",
+      "民宿",
+      "驿站",
+      "学校",
+      "公厕",
+      "示范茶园",
+      "企业",
+      "党群服务中心",
+    ];
+    const black = {
+      "type": "FeatureCollection",
+      "features": []
+    }
+    const extent = [
+      [
+        113.867534, 31.983513
+      ],
+      [
+        113.920483, 32.050656
+      ]
+    ];
+
+    const map = new EMap("map", {
+      style: "None",
+      config: "none",
+      zoom: 15,
+      center: [113.902087, 32.028238]
+    });
+    // 地图加载完成事件
+    map.addEventListener("onMapLoaded", function () {
+      PNGS.forEach(function (fileName) {
+        map.loadImage(`${fileName}`, `./drawingMapIcons/${fileName}.png`, () => { });
+        // 可以修改icon路径位置
+      });
+      map.fitBounds(extent, 20);
+      addLayers();
+
+      //点击事件
+      map.map.on("touchstart", "bussiness", function (e) {
+        isDestroy = false;
+        located(e.features[0].id);
+      });
+
+      //主体绑定
+      $("#map").on("touchend", destroy);
+      //移除绑定
+      map.map.on("movestart", function (e) {
+        $("#map").off("touchend", destroy);
+      });
+
+      //移除绑定
+      map.map.on("move", function (e) {
+        $("#map").off("touchend", destroy);
+      });
+
+      //添加绑定
+      map.map.on("moveend", function () {
+        if (time === 0) {
+          time = 1
+          return;
+        }
+        $("#map").on("touchend", destroy);
+      });
+
+      window.parent.postMessage({ // 地图加载完成
+        type: 'loadFinish',
+      }, '*')
+    });
+    //摧毁气泡办法
+    function destroy() {
+      if (isDestroy) {
+        located(-1);
+        map.destroyInfoSymbol();
+      }
+      isDestroy = !isDestroy;
+    }
+
+    // 添加图层
+    function addLayers() { // 背景颜色
+      map.addLayer({
+        "id": "background",
+        "type": "background",
+        "paint": {
+          "background-color": "#dbebd0"
+        }
+      });
+      // 手绘地图
+      map.addLayer({
+        "id": "drawingMap",
+        "type": "raster",
+        "source": {
+          "type": "raster",
+          "tileSize": 128,
+          "tiles": [`${mapbox_ip}hydra-code-egis/api/v1/geoserver/get-image-data?layer=cite%3Ahjc_drawingMap_2022&style=&tilematrixset=EPSG%3A900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A900913%3A{z}&TileCol={x}&TileRow={y}`]
+        }
+      });
+      // 点位
+      map.addLayer({
+        "id": "bussiness",
+        "type": "symbol",
+        "source": {
+          "type": "geojson",
+          "data": black
+        },
+        "filter": ["all", ["!=", ["get", "type"], "农户"], ["!=", ["get", "type"], "党员户"]],
+        "layout": {
+          "text-field": "{name}",
+          "text-size": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12.9, 8,
+            16, 20
+          ],
+          "text-anchor": "left",
+          "text-allow-overlap": true,
+          "text-offset": [1, -1],
+          "text-padding": 10,
+          "icon-image": [
+            "match",
+            ["get", "type"],
+            "示范茶园", "示范茶园",
+            "民宿", "民宿",
+            "景点", "景点",
+            "党群服务中心", "党群服务中心",
+            "公厕", "公厕",
+            "学校", "学校",
+            "驿站", "驿站",
+            "企业", "企业",
+            "示范茶园"
+          ],
+          "icon-size": [
+            "match",
+            ["get", "flag"],
+            0, 0.4,
+            1, 0.8,
+            0.4
+          ],
+          "icon-allow-overlap": true,
+          "icon-anchor": "bottom"
+        },
+        "paint": {
+          "text-halo-color": "#FF5744",
+          "text-halo-width": 8,
+          "text-color": "#fff"
+        }
+      });
+    }
+    // 过滤要素
+    function filter(value) {
+      map.setFilter("bussiness", ["in", "type", value]);
+    }
+    // 定位
+    function located(featuresId) {
+      interfaceData.features.forEach(function (ft) {
+        if (ft.id === featuresId) {
+          ft.properties.flag = 1;
+          map.centerAndZoom(turf.getCoords(ft), 13);
+          map.destroyInfoSymbol();
+          map.createInfoSymbol("popup",
+            `<div class='popover'>
+            <div class='content'>
+              <img
+                src='${imageSrc(ft.properties.image.split("\n")[0])}'
+                alt=""
+                class="popoverImg"
+              />
+              <p class="popoverName">${ft.properties.name}</p>
+            </div>
+            <div class="btns">
+              <div class="btnItem" id="handleNavigation">去这里</div>
+              <div class="btnItem" id="goDetail">详情</div>
+            </div>
+          </div>`, ft.geometry.coordinates, [-100, -250], "", false);
+          $(".mapboxgl-popup-content").css("padding", 0)
+          //绑定导航按钮
+          $("#handleNavigation").click(function (e) {
+            parent.window.handleNavigation(e, ft.geometry)
+          });
+          //绑定详情按钮
+          $("#goDetail").click(function () {
+            parent.window.goDetail(ft.id)
+          });
+          $(".popover").on("touchend", function (e) {
+            isDestroy = false;
+          })
+
+        } else {
+          ft.properties.flag = 0;
+        }
+      });
+      // console.log(interfaceData);
+      // map.setData("bussiness", interfaceData);
+    }
+    function setSource(data) {
+      interfaceData = data;
+      map.setData('bussiness', data)
+    }
+    function onBtnClick(type) {
+      map.fitBounds(extent, 20);
+      map.destroyInfoSymbol();
+      let value = type
+      if (type == "党群服务") {
+        value = "党群服务中心"
+      }
+      currentTab = value;
+      located(-1);
+      filter(value);
+    }
+    function setIsDestroy() {
+      isDestroy = false
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="typeList"></div>
+</body>
+
+</html>

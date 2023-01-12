@@ -1,0 +1,102 @@
+@import "../theme";
+
+body {
+  background-color: #f5f5f5;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+//
+:global {
+  //默认主题
+  .theme-color {
+    color: @primary-color;
+  }
+
+  .theme-bg {
+    background-color: @primary-color;
+  }
+
+  .theme-border {
+    border: 1rem/@font-size-base solid @primary-color;
+  }
+
+  //蓝色主题
+  .theme-blue {
+    .theme-color {
+      color: @theme-blue-primary-color;
+    }
+
+    .theme-bg {
+      background-color: @theme-blue-primary-color;
+    }
+
+    .theme-border {
+      border: 1rem/@font-size-base solid @theme-blue-primary-color;
+    }
+  }
+
+}
+
+//
+:global {
+  input {
+    line-height: normal;
+  }
+
+  .disn {
+    display: none;
+  }
+
+  .am-picker-popup-item {
+    font-size: 28rem/@font-size-base;
+    color: @primary-color;
+  }
+
+  .theme-blue {
+    .am-picker-popup-item {
+      color: @theme-blue-primary-color;
+    }
+  }
+
+  .am-search {
+    background-color: #f2f2f2;
+
+    .am-search-input {
+      @height: 56rem/@font-size-base;
+      height: @height;
+      border-radius: @height/2;
+
+      input[type=search], .am-search-synthetic-ph {
+        height: @height;
+        line-height: @height;
+      }
+    }
+
+    .am-search-cancel {
+      color: @primary-color;
+    }
+  }
+
+
+  .theme-blue {
+    .am-search {
+      .am-search-cancel {
+        color: @theme-blue-primary-color;
+      }
+    }
+  }
+
+  .am-modal-button-group-h .am-modal-button {
+    font-size: 30rem/@font-size-base;
+    color: @primary-color;
+  }
+
+  .theme-blue {
+    .am-modal-button-group-h .am-modal-button {
+      color: @theme-blue-primary-color;
+    }
+  }
+}

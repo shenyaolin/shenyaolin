@@ -1,0 +1,48 @@
+@import "~framework/assets/css/theme";
+
+:global {
+  .cjm-mobile-form-item-content {
+    width: 100%;
+  }
+
+  .cjm-mobile-send-code-input-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0;
+
+    & > a, span {
+      margin: 0 !important;
+      height: auto;
+    }
+  }
+
+  .cjm-mobile-send-code-input {
+    width: 320rem/@font-size-base;
+    display: flex;
+    align-items: center;
+  }
+
+  .cjm-mobile-send-code-link {
+    display: inline-block;
+    vertical-align: top;
+    color: @primary-color;
+    font-size: 26rem/@font-size-base;
+    text-decoration: none;
+    margin-top: 31rem/@font-size-base;
+
+    &.disabled {
+      color: @button-disable-color;
+    }
+  }
+
+  .theme-blue {
+    .cjm-mobile-send-code-link {
+      color: @theme-blue-primary-color;
+
+      &.disabled {
+        color: @theme-blue-button-disable-color;
+      }
+    }
+  }
+}

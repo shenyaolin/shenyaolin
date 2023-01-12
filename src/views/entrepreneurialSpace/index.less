@@ -1,0 +1,498 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+.enterpreneurialContainer {
+  background: #f7f8fc;
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 3rem;
+    background: url(../../assets/images/newImg/Information-background.png);
+    background-size: 100% 100%;
+    div {
+      font-size: 0.26rem;
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      color: #a6ddfc;
+    }
+    & > div:first-child {
+      margin-bottom: 0.32rem;
+      font-size: 0.32rem;
+      font-weight: 500;
+      color: #ffffff;
+    }
+  }
+  .navBox {
+    padding: 0 0.32rem;
+    display: flex;
+    justify-content: space-between;
+    .listItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 3.32rem;
+      padding: 0.44rem 0 0.56rem;
+      background-color: #fff;
+      font-size: 0.28rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+      border-radius: 0.2rem;
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+      & > div:nth-child(2) {
+        margin: 0.26rem 0 0.24rem;
+      }
+      & > div:nth-child(3) {
+        display: flex;
+        align-items: center;
+        color: #bfbfbf;
+        img {
+          width: 0.28rem;
+          height: 0.28rem;
+          margin-left: 0.06rem;
+        }
+      }
+    }
+  }
+}
+
+//预约
+.subscribeContainer {
+  .date {
+    padding-left: 0.32rem;
+    display: flex;
+    align-items: center;
+    height: 0.88rem;
+    background: #ffffff;
+    margin-bottom: 0.16rem;
+    &::before {
+      content: "";
+      margin-right: 0.08rem;
+      width: 0.28rem;
+      height: 0.28rem;
+      background: url("../../assets/images/newImg/date.png");
+      background-size: 100% 100%;
+    }
+    &::after {
+      content: "";
+      margin-right: 0.04rem;
+      width: 0.24rem;
+      height: 0.24rem;
+      background: url("../../assets/images/newImg/block-arrow.png");
+      background-size: 100% 100%;
+    }
+    div {
+      height: 0.28rem;
+      :global {
+        .cjm-mobile-form-input {
+          width: 1.7rem;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .listItem {
+    box-sizing: border-box;
+    padding: 0.32rem 0.32rem 0.24rem;
+    width: 100%;
+    // height: 3.08rem;
+    background: #ffffff;
+    border-radius: 0.2rem;
+    margin-bottom: 0.16rem;
+    .topBox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.24rem;
+      .topLeft {
+        .name {
+          font-size: 0.32rem;
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          color: #333333;
+        }
+        .introduce {
+          margin: 0.22rem 0;
+          width: 0.56rem;
+          font-size: 0.28rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #999999;
+        }
+        .address {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          font-size: 0.28rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #999999;
+          & > span {
+            display: flex;
+            &:first-child {
+              margin-right: 0.22rem;
+              min-width: fit-content;
+            }
+          }
+          img {
+            margin-right: 0.04rem;
+            width: 0.28rem;
+            height: 0.28rem;
+          }
+        }
+      }
+      .topRight {
+        width: 2rem;
+        height: 1.42rem;
+        border-radius: 0.1rem;
+      }
+    }
+    .bottomBox {
+      display: flex;
+      width: 100%;
+      height: 0.86rem;
+      .morning,
+      .afternoon {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 0.26rem;
+        color: #a6a6a6;
+        .morningBox {
+          height: 0.44rem;
+          line-height: 0.44rem;
+          border: 0.02rem solid #e4e4e4;
+          border-right: none;
+        }
+        .afternoonBox {
+          height: 0.44rem;
+          line-height: 0.44rem;
+          border: 0.02rem solid #e4e4e4;
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+//预定时间
+.reserveContainer {
+  position: relative;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  .reserveBox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // height: 5.52rem;
+    background: #ffffff;
+    border-radius: 0.2rem 0.2rem 0 0;
+    .header {
+      padding: 0.32rem 0 0.4rem 0.32rem;
+      border-bottom: 0.02rem solid #eee;
+      .name {
+        font-size: 0.32rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: #333333;
+      }
+      .introduce {
+        margin-top: 0.22rem;
+        width: 0.56rem;
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #999999;
+      }
+      .address {
+        padding-left: 0.32rem;
+        margin-top: 0.22rem;
+        display: flex;
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #999999;
+        & > div {
+          display: flex;
+          margin-right: 0.22rem;
+          align-items: center;
+        }
+        img {
+          margin-right: 0.04rem;
+          width: 0.28rem;
+          height: 0.28rem;
+        }
+      }
+    }
+    .footer {
+      .radioBox {
+        margin-left: 0.32rem;
+        height: 0.88rem;
+        display: flex;
+        align-items: center;
+        img {
+          width: 0.36rem;
+          height: 0.36rem;
+        }
+        .name {
+          border-bottom: 0.02rem solid #eee;
+          margin-left: 0.1rem;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.36rem;
+          font-family: Source Han Sans CN;
+          color: #333333;
+          & > div:last-child {
+            margin-right: 0.32rem;
+            font-size: 0.32rem;
+            font-family: SourceHanSansCN-Regular;
+            color: #999999;
+          }
+        }
+      }
+      :global {
+        .cjm-mobile-button {
+          margin: 0.4rem 50%;
+          transform: translateX(-50%);
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+//预订内容
+.reserveContentContainer {
+  .formItem {
+    display: flex;
+    flex-direction: column;
+    :global {
+      .cjm-mobile-form-item-content {
+        position: relative;
+        width: 100%;
+        .cjm-mobile-form-textarea {
+          box-sizing: border-box;
+          padding: 0 0 0 0.3rem;
+          height: 3.42rem;
+        }
+      }
+    }
+
+    .textNum {
+      position: absolute;
+      bottom: -0.3rem;
+      right: 0.2rem;
+      margin: 0 0 0.32rem 6rem;
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      line-height: 0.32rem;
+      color: #bfbfbf;
+    }
+  }
+  .dateFormItem {
+    padding-left: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin: 0.16rem 0;
+    height: 0.88rem;
+    background: #ffffff;
+    font-size: 0.28rem;
+    font-family: SourceHanSansCN-Regular;
+    color: #333333;
+    .date {
+      margin-right: 0.48rem;
+      color: #666666;
+    }
+  }
+}
+
+//我的预约
+.mySubscribeContainer {
+  .title {
+    padding: 0.24rem 0 0.24rem 0.32rem;
+    font-size: 0.28rem;
+    font-family: SourceHanSansCN-Regular;
+    color: #999999;
+  }
+  .listItme {
+    box-sizing: border-box;
+    margin-bottom: 0.16rem;
+    padding: 0.32rem;
+    background: #ffffff;
+    border-radius: 0.2rem;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      .name {
+        font-size: 0.32rem;
+        font-family: Source Han Sans CN;
+        font-weight: bold;
+        color: #333333;
+      }
+      .approvalStatus {
+        min-width: fit-content;
+      }
+    }
+    .appointmentDate {
+      margin: 0.24rem 0;
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #999999;
+      span {
+        margin: 0 0.2rem;
+      }
+    }
+    .location {
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #999999;
+    }
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.24rem;
+    }
+    button {
+      width: 1.84rem;
+      height: 0.6rem;
+      border: 0.02rem solid #26a2ff;
+      border-radius: 0.3rem;
+      background-color: #fff;
+      font-size: 0.26rem;
+      color: #26a2ff;
+    }
+  }
+}
+
+//我的预约详情
+.mySubscribeDetailContainer {
+  .header {
+    padding: 0.32rem 1.18rem 0.32rem 0.7rem;
+    background: #ffffff;
+    margin-bottom: 0.16rem;
+    .activityName {
+      position: relative;
+      font-size: 0.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.1rem;
+        left: -0.3rem;
+        display: inline-block;
+        width: 0.16rem;
+        height: 0.16rem;
+        background: #26a2ff;
+        border-radius: 50%;
+      }
+    }
+    .recordNo {
+      margin: 0.22rem 0 0.54rem 0;
+      font-size: 0.28rem;
+      font-family: SourceHanSansCN-Regular;
+      color: #bfbfbf;
+    }
+    .date {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0.24rem;
+      .morning,
+      .afternonn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > div {
+          &:first-child {
+            font-size: 0.36rem;
+            font-family: Source Han Sans CN;
+            font-weight: 500;
+            color: #333333;
+            margin-bottom: 0.24rem;
+          }
+          &:last-child {
+            font-size: 0.28rem;
+            font-family: SourceHanSansCN-Regular;
+            color: #999999;
+          }
+        }
+      }
+      .rod {
+        margin-top: 0.18rem;
+        width: 0.66rem;
+        height: 0rem;
+        border: 0.02rem solid #707070;
+      }
+    }
+  }
+  .name,
+  .reservationPerson,
+  .phone {
+    padding: 0 0.32rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.88rem;
+    background: #ffffff;
+    border-bottom: 0.02rem solid #ededed;
+    & > div {
+      &:first-child {
+        min-width: max-content;
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #666666;
+        margin-right: 0.2rem;
+      }
+      &:last-child {
+        font-size: 0.28rem;
+        font-family: SourceHanSansCN-Regular;
+        color: #333333;
+      }
+    }
+  }
+  .content {
+    margin: 0.16rem 0;
+    padding: 0.38rem 0.46rem 0.46rem 0.32rem;
+    min-height: 2.88rem;
+    background: #ffffff;
+    font-size: 0.28rem;
+    font-family: SourceHanSansCN-Regular;
+    line-height: 0.44rem;
+  }
+  .audit {
+    padding: 0.32rem;
+    // min-height: 2.88rem;
+    background: #ffffff;
+    .title {
+      margin-bottom: 0.32rem;
+      font-size: 0.32rem;
+      font-family: Source Han Sans CN;
+      font-weight: 500;
+      color: #333333;
+    }
+    .placeholder {
+      font-size: 0.28rem;
+      color: #a6a6a6;
+    }
+    .auditContent {
+      font-size: 0.28rem;
+      color: #666666;
+      .auditResult {
+        margin-bottom: 0.2rem;
+        span {
+          color: #26a2ff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.threeServicePublicityContainer {
+  background: #f7f8fc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .Tabcontent {
+    margin-bottom: 0.2rem;
+    padding: 0 0.32rem;
+    background: #ffffff;
+    border-radius: 0.2rem;
+    flex: 1;
+    overflow-y: scroll;
+    .TabcontentItem {
+      padding: 0.4rem 0 0.34rem;
+      display: flex;
+      justify-content: space-between;
+      & > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title {
+          font-size: 0.32rem;
+          font-family: Source Han Sans CN;
+          font-weight: 500;
+          color: #333333;
+        }
+        .botton {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.28rem;
+          font-family: SourceHanSansCN-Regular;
+          color: #999999;
+          & > div:last-child::before {
+            content: "";
+            margin-right: 0.08rem;
+            display: inline-block;
+            width: 0.24rem;
+            height: 0.18rem;
+            background: url("../../assets/images/newImg/play.png") no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+      img {
+        margin-left: 0.34rem;
+        width: 2.24rem;
+        height: 1.5rem;
+        border-radius: 0.1rem;
+      }
+      &:not(:last-child) {
+        border-bottom: 0.02rem solid #ebebeb;
+      }
+    }
+  }
+}
+
+.threeServicePublicityDetailContainer {
+  padding: 0.32rem;
+  min-height: 100%;
+  background: #ffffff;
+  .title {
+    font-size: 0.32rem;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    line-height: 0.46rem;
+    color: #333333;
+  }
+  .time {
+    margin: 0.34rem 0 0.32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.28rem;
+    font-family: SourceHanSansCN-Regular;
+    color: #999999;
+    & > div:last-child::before {
+      content: "";
+      margin-right: 0.08rem;
+      display: inline-block;
+      width: 0.24rem;
+      height: 0.18rem;
+      background: url("../../assets/images/newImg/play.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  .introdice {
+    font-size: 0.3rem;
+    font-family: Source Han Sans CN;
+    line-height: 0.46rem;
+    color: #333333;
+  }
+  & > img {
+    display: block;
+    margin-top: 0.32rem;
+    width: 6.86rem;
+    height: 3.86rem;
+    border-radius: 0.1rem;
+    object-fit: cover;
+  }
+}

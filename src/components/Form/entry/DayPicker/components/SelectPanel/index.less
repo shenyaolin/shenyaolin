@@ -1,0 +1,127 @@
+@import "~framework/assets/css/theme";
+.selectPanelWrap {
+  position: absolute;
+  left: 0;
+  top: 32rem/@font-size-base;
+  min-width: 660rem/@font-size-base;
+  max-width: 800rem/@font-size-base;
+  // padding-top: 11rem/@font-size-base;
+  min-height: 100rem/@font-size-base;
+  background-color: #ffffff;
+  box-shadow: 0 3rem/@font-size-base 6rem/@font-size-base -4rem/@font-size-base rgba(0,0,0,.12);
+  z-index: 1000;
+  border: 1rem/@font-size-base solid #fafafa;
+  // .selectPanelArrow{
+  //   position: absolute;
+  //   top: 3rem/@font-size-base;
+  //   left: 10rem/@font-size-base;
+  //   width: 14rem/@font-size-base;
+  //   height: 14rem/@font-size-base;
+  //   background-color: #ffffff;
+  //   box-shadow: 2rem/@font-size-base -2rem/@font-size-base 6rem/@font-size-base rgba(0,0,0,.06);
+  //   transform: rotate(-45deg);
+  //   transition: left .3s ease-out;
+  // }
+  .arrow1 {
+    left: 10rem/@font-size-base;
+  }
+  .arrow2 {
+    left: 85%;
+  }
+  .selectPanelcontainer{
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 -4rem/@font-size-base 6rem/@font-size-base 0 rgba(0,0,0,.06);
+    display: flex;
+    .dayPanelWrap {
+      width: 750rem/@font-size-base;
+      height: 520rem/@font-size-base;
+      border-right: 1rem/@font-size-base solid #dfdfdf;
+    }
+    .panelTitle {
+      height: 80rem/@font-size-base;
+      line-height: 80rem/@font-size-base;
+      font-size: 20rem/@font-size-base;
+      text-align: center;
+      color: #666666;
+      border-bottom: 1rem/@font-size-base solid #dfdfdf;
+    }
+  }
+  .dayPanelblock {
+    margin-top: 20rem/@font-size-base;
+    table {
+      width: 96%;
+      margin-left: 2%;
+      th, td {
+        height: 50rem/@font-size-base;
+        line-height: 50rem/@font-size-base;
+        text-align: center;
+        font-size: 30rem/@font-size-base;
+        cursor: default;
+      }
+      .hasValue {
+        width: 70rem/@font-size-base;
+        height:70rem/@font-size-base;
+        border-radius: 50%;
+        &:hover {
+          background-color: #1890ff;
+        }
+      }
+      .chooseValue {
+        color: #ffffff;
+        background-color: #eeeeee;
+        &:hover {
+          background-color: #eeeeee;
+        }
+      }
+      .dayDisabled {
+        cursor: not-allowed;
+        background-color: #cccccc;
+        &:hover {
+          background-color: #cccccc;
+        }
+      }
+    }
+  }
+  .timePanelWrap {
+    height: 200rem/@font-size-base;
+    flex: auto;
+    .panelTitle {
+      height: 30rem/@font-size-base;
+      line-height: 30rem/@font-size-base;
+      font-size: 12rem/@font-size-base;
+      text-align: center;
+      color: #666666;
+      border-bottom: 1rem/@font-size-base solid #dfdfdf;
+    }
+    .timePanelContent {
+      height: 170rem/@font-size-base;
+      display: flex;
+      width: 100%;
+      .timeRowWrap {
+        flex: 1;
+        height: 100%;
+        text-align: center;
+        overflow: hidden;
+        &:hover {
+          overflow-y: auto;
+        }
+        div {
+          height: 20rem/@font-size-base;
+          line-height: 20rem/@font-size-base;
+          font-size: 12rem/@font-size-base;
+          &:hover {
+            background-color: #eeeeee;
+            cursor: default;
+          }
+        }
+        .chooseTime {
+          background-color: #dfedf9;
+          &:hover {
+            background-color: #dfedf9;
+          }
+        }
+      }
+    }
+  }
+}
